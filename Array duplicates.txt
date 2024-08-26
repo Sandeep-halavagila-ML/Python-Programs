@@ -1,0 +1,22 @@
+def find_duplicates(arr, n):
+    s = {}
+    repeat = []
+
+
+    for x in arr:
+        if x in s:
+            s[x] += 1
+        else:
+            s[x] = 1
+    for x, count in s.items():
+        if count > 1:
+            repeat.append(x)
+
+    if repeat:
+        return sorted(repeat)
+    else:
+        return [-1]
+
+arr = [2, 3, 1, 2, 3]
+n = len(arr)
+print(find_duplicates(arr, n)) 

@@ -1,0 +1,10 @@
+def second_largest(arr):
+    for x in arr:
+        if x==max(arr):
+            arr.remove(x)
+            for x in arr:
+                print(max(arr))
+                break
+    
+arr=[10,20,21,22,23]
+second_largest(arr)

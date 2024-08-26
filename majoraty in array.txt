@@ -1,0 +1,17 @@
+def find_majority_element(arr):
+    n = len(arr)
+    m = None
+    count = 0
+
+    for x in arr:
+        if count == 0:
+            m = x
+        count += (1 if x == m else -1)
+    
+    if arr.count(m) > n // 2:
+        return m
+    else:
+        return -1
+
+arr=[3,1,3,2,1,3,3]
+print(find_majority_element(arr))
